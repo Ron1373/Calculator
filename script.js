@@ -71,7 +71,7 @@ equalsButton.addEventListener("click", ()=>{
     } ;
     firstNumber=parseInt(operationsArr[0]);
     secondNumber=parseInt(operationsArr[1]);
-    result=operate(firstNumber, operation, secondNumber);
+    result=operate(firstNumber, operation, secondNumber).toPrecision(12);
     display.textContent=result;
     inputString=result;
     

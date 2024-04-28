@@ -17,6 +17,7 @@ body{
 .operator:hover, .number:hover, #equals:hover, #clear:hover{
     color: rgb(20,30,40);
     font-weight: bolder;
+    cursor: pointer;
 
 }
 
