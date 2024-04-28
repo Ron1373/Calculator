@@ -13,9 +13,7 @@ function divide(a,b){
     return a/b;
 }
 
-let firstNum, secondNum;
-
-let operator;
+let inputString="";
 
 function operate(firstNum, operator, secondNum){
     switch (operator){
@@ -33,8 +31,48 @@ function operate(firstNum, operator, secondNum){
             return divide(firstNum, secondNum);
             break;
     }
-}
+};
 
-const button=document.querySelectorAll('button');
 
-button.addEventListener('click', ()=>)
+const button=document.querySelectorAll('.button')
+const display=document.getElementById('calculator-display')
+
+button.forEach(btn=>btn.addEventListener("click",()=>{
+    inputString+=btn.textContent;
+    display.textContent=inputString;
+
+}))
+
+const clearButton=document.querySelector('#clear')
+clearButton.addEventListener('click',()=>{
+    inputString="";
+    display.textContent="";
+})
+const equalsButton=document.querySelector('#equals')
+let operationsArr="";
+let firstNumber;
+let operation;
+let secondNumber;
+let result;
+equalsButton.addEventListener("click", ()=>{
+    
+    if (inputString.includes('+')){
+        operationsArr=inputString.split('+');
+        operation="+";
+    } else if (inputString.includes('-')){
+        operationsArr=inputString.split('-');
+        operation="-";
+    } else if (inputString.includes('*')){
+        operationsArr=inputString.split('*');
+        operation="*";
+    } else if (inputString.includes('/')){
+        operationsArr=inputString.split('/');
+        operation="/";
+    } ;
+    firstNumber=parseInt(operationsArr[0]);
+    secondNumber=parseInt(operationsArr[1]);
+    result=operate(firstNumber, operation, secondNumber);
+    display.textContent=result;
+    inputString=result;
+    
+})
