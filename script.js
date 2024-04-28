@@ -34,3 +34,7 @@ function operate(firstNum, operator, secondNum){
             break;
     }
 }
+
+const button=document.querySelectorAll('button');
+
+button.addEventListener('click', ()=>)
