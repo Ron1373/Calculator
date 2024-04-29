@@ -1,10 +1,13 @@
 # Calculator
+
 **Overview**
+
 This app was created as a solo project for Chingu Voyage 49.
 
 **LIVE LINK**: https://whimsical-lokum-b8b76b.netlify.app/
 
 **Features**
+
 Allows the user to perform basic calculations: addition, subtraction, multiplication, and division.
 
 **Running the Project Locally**
